@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Goods</title>
+    <link rel="stylesheet" href="css/hw2.css">
+    <script src="js/vue.global.js"></script>
+  </head>
+  <body>
+<div id="app">
+ <div v-for="good in sortGoods"
+      :class="{'zero':good.count===0, 'many':good.count>20, 'not-many':good.count>0&&good.count<=20}">
+   <h2>{{good.title.toUpperCase()}}</h2>
+   <p>Цена: {{good.price}}</p>
+   <p>Количество: {{good.count}}</p>
+   <button type="button" @click="good.count--"
+   :disabled="good.count===0">Добавить в корзину</button>
+ </div>
+</div>
+  <script src="js/hw2.js"></script>
+  </body>
+</html>
