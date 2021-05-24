@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Задача 1. Поиск по названию статьи.</title>
+    <script src="js/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <form>
+          <!-- <label for="search">Фильтр</label> -->
+          <input id ="search" type="text" v-model="search" placeholder="Фильтр по названию статьи">
+        </form>
+      </header>
+      <section>
+        <div v-for="article in filteredList">
+          <h3>{{article.title}}</h3>
+          <img :src="article.image" alt="">
+        </div>
+      </section>
+    </div>
+    <script src="js/hw4.1.js"></script>
+  </body>
+</html>
