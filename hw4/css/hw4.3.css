@@ -1,0 +1,43 @@
+@import "flex-grid.css";
+
+.{
+  box-sizing: border-box;
+}
+.grey-icon{
+  color:darkgrey;
+}
+.grey-icon:hover{
+  color:grey;
+  cursor: pointer;
+}
+.active-icon{
+  color:#6d34e9!important;
+}
+.active-icon:hover{
+  color:#6d34e9!important;
+  cursor: pointer;
+}
+
+.listview .article{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.listview .article p{
+  margin-left: 10px;
+}
+
+
+.gridview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridview .article {
+  display: flex;
+  padding: 10px;
+}
+
+.gridview .article p{
+  display: none;
+}

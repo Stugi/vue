@@ -14,7 +14,7 @@
           <p>Стоимость: {{service.cost}}</p>
         </div>
       </main>
-      <footer>
+      <footer v-show="sumService!=0">
         <p>Итого: {{sumService}}</p>
       </footer>
     </div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Задача 3. List & Grid</title>
+    <script src="js/vue.global.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/hw4.3.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <span class="material-icons md-48 icon grey-icon"
+              :class="{'active-icon':currentView==='list'}"
+              @click="currentView='list'">dvr</span>
+        <span class="material-icons md-48 icon grey-icon"
+              :class="{'active-icon':currentView==='grid'}"
+              @click="currentView='grid'">grid_view</span>
+      </header>
+      <div :class="stylesArticles.name">
+        <div v-for="article in articles">
+          <div class="article">
+              <img :src="article.image" alt="" :class="stylesArticles.image"
+              @click="doSmth">
+              <p class="col-11">{{article.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/hw4.3.js"></script>
+  </body>
+</html>
