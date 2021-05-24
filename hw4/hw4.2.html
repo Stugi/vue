@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Задача 2. Перечень услуг</title>
+    <link rel="stylesheet" href="css/hw4.2.css">
+    <script src="js/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div v-for="service in services" @click="service.selected=!service.selected" :class="{active:service.selected}">
+          <h3>{{service.name}}</h3>
+          <p>Стоимость: {{service.cost}}</p>
+        </div>
+      </main>
+      <footer>
+        <p>Итого: {{sumService}}</p>
+      </footer>
+    </div>
+ <script src="js/hw4.2.js"></script>
+  </body>
+</html>
